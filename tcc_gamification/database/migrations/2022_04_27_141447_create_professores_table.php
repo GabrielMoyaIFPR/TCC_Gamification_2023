@@ -17,6 +17,7 @@ class CreateProfessoresTable extends Migration
             $table->id();
             $table->timestamps();
             $table->boolean('admin')->default(false);
+            $table->boolean('prof_disciplina')->default(false);
             $table->unsignedBigInteger('usuario_id');
             $table->foreign('usuario_id')->references('id')->on('usuarios');
         });
